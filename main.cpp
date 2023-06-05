@@ -40,9 +40,14 @@ void drawHori(int length) {
 void idle() {
   int tempLength = 0;
   while (true) {
-      cout << char(46) << "\n";
       tempLength++;
-      usleep(250000);
+    
+      cout << char(46) << "\n";
+      usleep(100000);
+      cout << string(tempLength, char(32));
+      
+      cout << char(32) << char(46) << "\n";
+      usleep(100000);
       cout << string(tempLength, char(32));
   }
 }
@@ -92,5 +97,6 @@ int consoleInput() {
 int main() {
   //comment out "consoleInput();" to manually use draw functions
   //consoleInput();
+
   idle();
 }
